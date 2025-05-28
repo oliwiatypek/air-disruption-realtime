@@ -113,3 +113,20 @@ System generuje dane w bazie PostgreSQL (`air_data`, tabela `cancellations`), kt
 > 💡 Jeśli wystąpi błąd SSL, w ustawieniach zaawansowanych połączenia dodaj `?sslmode=disable`.
 
 ---
+
+## 📊 Tableau jako warstwa wizualizacyjna
+
+Alternatywa dla Power BI, zwłaszcza dla systemu operacyjnego MacOS. **Ważne!** Zadziała tylko na Tableau Desktop, nie na Tableau Public.
+
+### Jak połączyć Tableau z bazą:
+1. Na stronie internetowej [Tableau Drivers](https://www.tableau.com/support/drivers) sprawdź czy potrzebujesz drivera dla swojego systemu operacyjnego.
+2. Pobierz drivera dla PostgreSQL i postępuj zgodnie z instrukcją.
+3. Wybierz: **Connect → To a Server → More... → szukaj "PostgreSQL"**
+4. Wypełnij:
+   - **Server:** `localhost`
+   - **Port:** 5432
+   - **Database:** `air_data`
+   - **Authentication:** 'Username and Password'
+   - **Login:** `user`
+   - **Hasło:** `password`
+5. Tabele delays i cancellations powinny wyskoczyć automatycznie.
